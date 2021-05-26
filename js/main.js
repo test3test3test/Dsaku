@@ -22,11 +22,21 @@ $(document).ready(function(){
     setTimeout(initialF,1000);
 });
 
-//gbHeadDrop
+//スマホではaddingやremobingを使用しないよう設定
+$(document).ready(function(){
+    if ($(window).width() > 740) {
+        //gbHeadDrop
+        $(function() { 
+            // $(".gbHeadDrop").hide();
+        
+            $(".gbDropMenu").hover(adding, removing);
+        });
+    }
+});
+
+
 $(function() { 
     $(".gbHeadDrop").hide();
-
-    $(".gbDropMenu").hover(adding, removing);
 });
 
 
